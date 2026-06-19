@@ -175,15 +175,18 @@ def rag_chain(query):
 
 
 # step-10 ask question
-while True:
-    query = input('\nAsk a question (or type "exit"): ')
+if __name__ == '__main__':
 
-    if query.lower().strip() == 'exit':
-        break
+    while True:
 
-    response = rag_chain(query)
+        query = input('\nAsk a question (or type "exit"): ')
 
-    print('\nAnswer:\n')
-    print(response)
+        if query.lower().strip() == 'exit':
+            break
+
+        response = rag_chain(query)
+
+        print('\nAnswer:\n')
+        print(response)
 
 # end of code
